@@ -2,7 +2,7 @@
 //  EasyShopperApp.swift
 //  EasyShopper
 //
-//  Created by Anders Lassen on 30/01/2021.
+//  Created by Anders Lassen on 03/12/2020.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct EasyShopperApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ShoppingBasketView()
         }
     }
 }

@@ -1,0 +1,18 @@
+This Xcode project is a slightly modified version of a code challenge I performed in 2020 as part of a job application for
+a iOS developer position. I did not get the job finally, but my solution to the code challenge brought me to a second job interview.
+
+The iOS App is implemented using mainly Swift, SwiftUI and Combine. It consist of mainly one screen that constitute a shopping basket that 
+can open two related sheet views.
+
+In software terms and generally speaking, the solution demonstrates my ability to:
+
+- write clean and readable code
+- use standard software architectures and patterns such as MVVM, delegation and dependency injection
+- construct presentable UI (although simple)
+
+Furthermore, it demonstrates my knowledge about and ability to work with specific technologies, such as:
+
+- Swift, SwiftUI, Combine, HTTP request, JSON data, Git
+
+Note that there is flaw in the App that I am still working on to solve. For unknown reasons, the hit area of the small +/- buttons on the main 
+screen is a bit misplaced. Intended functionality can be obtained by hitting the buttons a bit down and left to the center of a button.
