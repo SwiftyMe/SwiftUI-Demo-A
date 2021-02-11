@@ -1,7 +1,7 @@
 This Xcode project is a slightly modified version of a code challenge I performed in 2020 as part of a job application for
 an iOS developer position. I did not get the job finally, but my solution to the code challenge brought me to a second job interview.
 
-The iOS App is implemented using mainly Swift, SwiftUI and Combine. It consist of mainly one screen that constitute a shopping basket that 
+The iOS App is implemented using Swift, SwiftUI and Combine. It consist of mainly one screen that constitute a shopping basket that 
 can open two related sheet views.
 
 In software terms and generally speaking, the solution demonstrates my ability to:
