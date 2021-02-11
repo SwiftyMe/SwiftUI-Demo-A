@@ -4,7 +4,7 @@ an iOS developer position. I did not get the job finally, but my solution to the
 The iOS App is implemented using Swift, SwiftUI and Combine. It consist of mainly one screen that constitute a shopping basket that 
 can open two related sheet views.
 
-In software terms and generally speaking, the solution demonstrates my ability to:
+In software terms and generally speaking, the solution demonstrates my abilities to:
 
 - write clean and readable code
 - use standard software architectures and patterns such as MVVM, delegation and dependency injection
