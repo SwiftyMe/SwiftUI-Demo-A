@@ -13,6 +13,3 @@ In software terms and generally speaking, the solution demonstrates my abilities
 Furthermore, it demonstrates my knowledge about and ability to work with specific technologies, such as:
 
 - Swift, SwiftUI, Combine, HTTP request, JSON data, Git
-
-Note that there is flaw in the App that I am still working on to solve. For unknown reasons, the hit area of the small +/- buttons on the main 
-screen is a bit misplaced. Intended functionality can be obtained by hitting the buttons a bit down and left to the center of a button.
