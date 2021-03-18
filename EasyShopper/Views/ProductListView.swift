@@ -53,6 +53,7 @@ struct ProductListView: View {
                     
                     Text("Save").opacity(self.saveEnabled ? 1 : 0.5)
                 }
+                .disabled(!self.saveEnabled)
             }
             .padding()
             .background(Color.init(white:0.90))
