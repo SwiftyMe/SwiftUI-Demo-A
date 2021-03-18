@@ -61,12 +61,17 @@ struct ProductListView: View {
                 .background(Color.init(white:0.9))
                 .padding(0)
             
-            List(self.productList.products, id:\.id) { product in
-                    
-                ProductListRowView(product:product, changed: { self.saveEnabled = true })
-            }
-            .background(Color.white)
+            ScrollView {
                 
+                LazyVStack(spacing:0) {
+                    
+                    ForEach(self.productList.products) { product in
+                            
+                        ProductListRowView(product:product, changed: { self.saveEnabled = true })
+                    }
+                }
+            }
+
             Spacer()
         }
         .background(Color.white)

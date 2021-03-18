@@ -18,55 +18,60 @@ struct BasketListRowView: View {
     
     var body: some View {
         
-        HStack(spacing:15) {
+        VStack(spacing:10) {
             
-            Button(action: {
+            HStack(spacing:15) {
                 
-                self.clicked()
-                
-            }) {
-                
-                HStack(spacing:10) {
+                Button(action: {
                     
-                    Image(uiImage: basketItem.image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.vertical,5)
+                    self.clicked()
                     
-                    VStack(alignment:.leading, spacing:2) {
+                }) {
+                    
+                    HStack(spacing:10) {
                         
-                        Text(basketItem.name).bold().font(.system(size:14.0))
+                        Image(uiImage: basketItem.image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding(.vertical,5)
                         
-                        Text("Item(s): \(basketItem.count)")
-                            .font(.system(size:13.0))
-                        
-                        Text("Total Price: \(basketItem.totalPrice)")
-                            .font(.system(size:13.0))
+                        VStack(alignment:.leading, spacing:2) {
+                            
+                            Text(basketItem.name).bold().font(.system(size:14.0))
+                            
+                            Text("Item(s): \(basketItem.count)")
+                                .font(.system(size:13.0))
+                            
+                            Text("Total Price: \(basketItem.totalPrice)")
+                                .font(.system(size:13.0))
+                        }
                     }
                 }
-            }
-            
-            Spacer()
-            
-            //FIXME: Hit area of buttons are offset quite a lot
-            
-            HStack(alignment:.bottom, spacing:15) {
                 
-                Button(action: { self.basketItem.incrementCount() }) {
-                    Image(systemName:"plus.circle")
-                        .imageScale(.large)
-                }
+                Spacer()
                 
-                Button(action: { self.basketItem.decrementCount() }) {
-                    Image(systemName:"minus.circle")
-                        .imageScale(.large)
-                        .opacity(self.basketItem.count == 0 ? 0.5 : 1)
+                HStack(alignment:.bottom, spacing:15) {
+                    
+                    Button(action: { self.basketItem.incrementCount() }) {
+                        Image(systemName:"plus.circle")
+                            .imageScale(.large)
+                    }
+                    
+                    Button(action: { self.basketItem.decrementCount() }) {
+                        Image(systemName:"minus.circle")
+                            .imageScale(.large)
+                            .opacity(self.basketItem.count == 0 ? 0.5 : 1)
+                    }
+                    .disabled(self.basketItem.count == 0)
                 }
-                .disabled(self.basketItem.count == 0)
+                .font(.system(size:18.0))
+                .padding(.leading,20)
             }
-            .font(.system(size:18.0))
-            .padding(.leading,20)
+            .frame(height: 80)
+            
+            Divider()
         }
-        .frame(height: 80)
+        .padding(.horizontal, 10)
+        .padding(.vertical, 5)
     }
 }

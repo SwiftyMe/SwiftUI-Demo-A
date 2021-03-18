@@ -54,16 +54,18 @@ struct ShoppingBasketView: View {
             
             Divider().background(Color.init(white:0.8))
             
-            List {
-
-                ForEach(self.shoppingBasket.basketItems)  { basketItem in
+            ScrollView {
+                
+                LazyVStack(spacing:0) {
                     
-                    BasketListRowView(basketItem: basketItem, clicked: {
-                        self.sheet = Sheet(type:.basketItem,basketItem:basketItem)
-                    })
+                    ForEach(self.shoppingBasket.basketItems)  { basketItem in
+                        
+                        BasketListRowView(basketItem: basketItem, clicked: {
+                            self.sheet = Sheet(type:.basketItem,basketItem:basketItem)
+                        })
+                    }
                 }
             }
-            .buttonStyle(BorderlessButtonStyle())
             .background(Color.white)
             
             HStack {

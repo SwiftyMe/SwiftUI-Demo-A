@@ -18,21 +18,28 @@ struct ProductListRowView: View {
     
     var body: some View {
         
-        HStack(spacing:5) {
-
-            Image(uiImage: product.image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding(5)
-
-            Toggle(isOn:$product.addedToBasket.injectAction(self.changed)) {
-                VStack(alignment: .leading) {
-                    Text(product.name)
-                    Text("Price: \(product.price)")
-                }
-            }.font(.system(size:14.0))
+        VStack(spacing:10) {
+            
+            HStack(spacing:5) {
+                
+                Image(uiImage: product.image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding(5)
+                
+                Toggle(isOn:$product.addedToBasket.injectAction(self.changed)) {
+                    VStack(alignment: .leading) {
+                        Text(product.name)
+                        Text("Price: \(product.price)")
+                    }
+                }.font(.system(size:14.0))
+            }
+            .frame(height:80)
+            
+            Divider()
         }
-        .frame(height: 80)
+        .padding(.horizontal, 10)
+        .padding(.vertical, 5)
     }
 }
 
@@ -46,7 +53,7 @@ extension Binding {
         Binding(
             
             get: { return wrappedValue },
-                   
+            
             set: {
                 wrappedValue = $0
                 action()
